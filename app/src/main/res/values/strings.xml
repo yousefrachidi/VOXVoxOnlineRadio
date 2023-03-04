@@ -1,0 +1,246 @@
+<resources>
+    <string name="app_name">VOX Online Radio</string>
+
+    <string name="facebook_app_id">234234234234324</string>
+    <string name="admob_app_id">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="applovin_id">F9VAb231d3sd2d328JB0k-qedqwd3dd13sdf1d2s3</string>
+    <string name="wortise_app_id">00000000-0000-0000-0000-123456789abc</string>
+    <string name="onesignal_app_id">xxxxxxxx-xxxxx-xxxxx-xxxxx-xxxxxxxx</string>
+
+    <string name="made_with_in">Made With ❤ in Sri Lanka</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <!--Navigation drawer -->
+    <string name="nav_home">Home</string>
+    <string name="nav_settings">Settings</string>
+    <string name="nav_profile">Profile</string>
+    category
+    <string name="home">Home</string>
+    <string name="latest">Latest</string>
+    <string name="most">Most View</string>
+    <string name="category">Category</string>
+    <string name="countries">Countries</string>
+    <string name="recent">Recent View</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="favourite">Favourite</string>
+    <string name="podcasts">Podcasts</string>
+    <string name="recent_played">Recently Played</string>
+
+    <!--Login/Register -->
+    <string name="login">Login</string>
+    <string name="logout">Logout</string>
+    <string name="welcome">Welcome</string>
+    <string name="email_id">Email ID</string>
+    <string name="password">Password</string>
+    <string name="remember_me">Remember Me</string>
+    <string name="logout_success">Logout Successful</string>
+    <string name="new_to_logistics">New to Logistics?</string>
+    <string name="login_with_google">Login with Google</string>
+    <string name="sign_in_to_continue">Sign In to continue</string>
+    <string name="sign_up">Sign up</string>
+    <string name="register">Register</string>
+    <string name="registering">Registering..</string>
+    <string name="full_name">Full name</string>
+    <string name="telephone_number">Mobile</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="terms_and_conditions">Terms and Conditions</string>
+    <string name="by_signing_up_re_agree_to_oue">By signing up,re agree to oue</string>
+    <string name="and">and</string>
+    <string name="skip">Skip</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="privacy_policy">Privacy Policy</string>
+
+    <!--Forgot Password-->
+    <string name="forgot_pass">Forgot Your Password?</string>
+    <string name="forgot_password_message">Enter your valid email address below and we will send you email with instructions on how to change your password</string>
+
+    <!--Profile-->
+    <string name="profile">Profile</string>
+    <string name="delete_account">Delete Account</string>
+    <string name="edit_account">Edit Account</string>
+    <string name="sure_delete_account">Are you sure you want to delete this Account?</string>
+    <string name="not_log">Not Logged In</string>
+
+    <!--MSG-->
+    <string name="error_name">Please Enter Name</string>
+    <string name="error_email">Please Enter Email</string>
+    <string name="error_password">Please Enter Password</string>
+    <string name="error_cpassword">Please Enter Confirm Password</string>
+    <string name="error_pass_not_match">Confirm Password not matched</string>
+    <string name="error_pass_end_space">Please do not add space at end</string>
+    <string name="error_password_sort">This password is too shor</string>
+    <string name="error_invalid_email">Invalid Email</string>
+    <string name="error_phone">Enter Phone</string>
+    <string name="error_gender">Selected gender</string>
+    <string name="error_cannot_use_features">Cannot use some of the features without requested permission</string>
+    <string name="error_cannot_empty">Field cannot be empty</string>
+    <string name="error_internet_not_connected">Please connect to internet</string>
+    <string name="error_try_internet_connected">Please connect to internet and try again</string>
+    <string name="error_server_not_connected">Server not connected</string>
+    <string name="error_server">Server Error</string>
+    <string name="error_unauthorized_access">Unauthorized Access</string>
+    <string name="error_login_google">Error while login with google</string>
+    <string name="select_image">Select Image</string>
+    <string name="error_no_data_found">No Data Found</string>
+    <string name="no_notification">No Notification</string>
+    <string name="try_again">Try Again</string>
+    <string name="not_start_fm">Please Start Radio First</string>
+    <string name="error_no_selected">No Radio Selected</string>
+    <string name="unknown_song">Unknown Song</string>
+
+    <!--  popup   -->
+    <string name="popup_description">Description</string>
+    <string name="popup_go_to_category">Go to Category</string>
+    <string name="popup_drive_mode">Drive mode</string>
+    <string name="search_youtube">Search Youtube</string>
+    <string name="search">Search</string>
+
+    <!-- Share Song-->
+    <string name="share_radio">Share Radio</string>
+    <string name="listening">I am listening</string>
+
+    <!--About-->
+    <string name="about">About Us</string>
+    <string name="rate_the_app">Rate the app</string>
+    <string name="love_this_app">Love this app? Let us Know in the Google Play Store how we can make it even better</string>
+    <string name="share_the_app">Share the app with your friends and family</string>
+    <string name="company">Company</string>
+    <string name="email">Email</string>
+    <string name="version">Version</string>
+    <string name="website">Website</string>
+    <string name="contact">Contact</string>
+    <string name="share">Share</string>
+
+    <!--Settings-->
+    <string name="settings">Settings</string>
+    <string name="app_theme">App Theme</string>
+    <string name="dark_or_light_mode">Dark or Light Mode</string>
+    <string name="theme_classic">Classic</string>
+    <string name="theme_dark_grey">Dark Grey</string>
+    <string name="theme_dark_blue">Dark Blue</string>
+    <string name="theme_dark">Dark</string>
+    <string name="cache">Cache</string>
+    <string name="clear_cache">Clear cache data</string>
+    <string name="cache_cleared">Cache Cleared</string>
+    <string name="clearing_cache">Clearing Cache..</string>
+    <string name="this_app_privacy_policy">This app privacy policy</string>
+    <string name="social_links">Social links, policy</string>
+    <string name="enable_push_notification">Enable Push Notification</string>
+    <string name="on_off_notification">On/off Notification</string>
+    <string name="this_app_terms">This app Terms and Conditions</string>
+    <string name="now_playing">Now playing</string>
+    <string name="customize_your_now_playing">Customize your now playing screen</string>
+    <string name="now_playing_theme">Now playing theme</string>
+    <string name="customize_your_now_playing_theme">Customize your now playing screen theme</string>
+    <string name="volume_controls">Volume controls</string>
+    <string name="show_volume_controls">if enough space is available, show volume controls in the now playing screen</string>
+    <string name="customize_your_drive_mode">Customize your drive mode player screen</string>
+    <string name="personalize">Personalize</string>
+    <string name="customize_your_ui_controls">Customize your UI controls</string>
+    <string name="blur_amount">Blur amount</string>
+    <string name="amount_of_blur">Blur applied for themes, lower is faster</string>
+    <string name="snow_fall_effect">Snow fall effect</string>
+    <string name="only_support_night_mode">Only support night mode</string>
+    <string name="adaptive_color">Adaptive color</string>
+    <string name="colors_change_according">The background colors change according to tha album art</string>
+    <string name="banner">Banner</string>
+    <string name="use_scale_the_home_banner">Use scale the home banner</string>
+
+    <!--NowPlayingScreen-->
+    <string name="player_normal">NORMAL</string>
+    <string name="player_fit">FIT</string>
+    <string name="player_flat">FLAT</string>
+    <string name="player_circle">CIRCLE</string>
+    <string name="player_blur">BLUR</string>
+    <string name="player_gradient">GRADIENT</string>
+    <string name="player_color">COLOR</string>
+
+    <!--Dialog-->
+    <string name="no">NO</string>
+    <string name="ok">OK</string>
+    <string name="yes">YES</string>
+    <string name="exit">Exit</string>
+    <string name="retry">Retry</string>
+    <string name="cancel">Cancel</string>
+    <string name="loading">Loading…</string>
+    <string name="invalid_user">Invalid User</string>
+    <string name="sure_exit">Are you sure you want to exit app?</string>
+    <string name="upgrade">Upgrade</string>
+    <string name="its_time_to_upgrade">Its time to Upgrade to the latest version of our application to get the best experience.</string>
+    <string name="do_it_now">DO IT NOW</string>
+    <string name="maintenance">Maintenance</string>
+    <string name="temporarily_down_for_maintenance">Temporarily Down for Maintenance</string>
+    <string name="we_are_performing_scheduled">we are performing scheduled maintenance. we should be back online shortly.</string>
+    <string name="try_again_later">Try again later</string>
+    <string name="cancel_timer">Cancel Timer</string>
+    <string name="select_Timer">Select Timer</string>
+    <string name="sure_cancel_timer">Are you sure you want to cancel timer?</string>
+    <string name="hh">hour</string>
+    <string name="mm">minutes</string>
+    <string name="stop_timer">Stop Timer</string>
+    <string name="start_timer">Start Timer</string>
+    <string name="upload_success">Upload Success</string>
+
+    <!--Feedback-->
+    <string name="feedback">Feedback</string>
+    <string name="send_feedback">Send Feedback</string>
+    <string name="report_any_issues">Report any issues you may have en countered with the app content or its functionality.</string>
+    <string name="please_describe_the_problem">Please describe the problem…</string>
+    <string name="submit">Submit</string>
+
+    <!--Rating-->
+    <string name="rating">Rating</string>
+    <string name="submit_rating">Submit Rating</string>
+    <string name="select_rating">Select Rating</string>
+    <string name="thanks_for_rating">Thanks for Rating</string>
+    <string name="report_message">Enter your text here…</string>
+
+    <!-- Suggestion -->
+    <string name="suggestion">Suggestion</string>
+    <string name="title_suggestion">Title</string>
+    <string name="enter_your_title_here_suggestion">Enter your title here</string>
+    <string name="description_suggestion">Description</string>
+    <string name="enter_your_description_here_suggestion">Enter your description here</string>
+
+    <!--Recording-->
+    <string name="recording">Recording</string>
+    <string name="file_deleted">File Deleted</string>
+    <string name="delete">Delete</string>
+    <string name="recording_start">Recording Start</string>
+    <string name="recording_complete">Recording Complete</string>
+    <string name="stop_record_first">Please Stop Record First</string>
+    <string name="sure_delete_recording">Are you sure you want to delete this Record?</string>
+    <string name="share_record">Share record</string>
+
+    <!--Subscribe-->
+    <string name="subscription_plan">Subscription Plan</string>
+    <string name="subscription_msg">Choose plan based on your usage. Below there are plan name,price and validity days.</string>
+    <string name="select_subscription_plan">Select Your Subscription Plan</string>
+    <string name="subscription_proceed">PROCEED</string>
+    <string name="plan_day_for">For %s</string>
+    <string name="premium_pack">Premium Pack</string>
+    <string name="premium_note">With our pack. You can enjoy an ad-free experience!</string>
+    <string name="premium_a_title">Premium Radios</string>
+    <string name="premium_a_note">Unlimited radios</string>
+    <string name="premium_b_title">Adblock</string>
+    <string name="premium_b_note">Use app more free without ads</string>
+    <string name="user_info">User Information</string>
+    <string name="choose_plan">You have selected</string>
+    <string name="choose_plan_1">You are logged in as</string>
+    <string name="change_plan">Change Plan</string>
+    <string name="premium_content">You don\'t have access to premium content kindly purchase subscription to watch this content or LOGIN with premium account.</string>
+    <string name="premium">Premium</string>
+    <string name="casty_introduction_text">Use this button to connect with Chromecast</string>
+    <string name="cast_youtube">Youtube and Embedded link direct does not cast</string>
+    <string name="cast_play_custom">Playing in Connected Chromecast</string>
+    <string name="subscribe_now">SUBSCRIBE NOW</string>
+
+    <!--Don't Change language-->
+    <string name="todo">TODO</string>
+
+</resources>

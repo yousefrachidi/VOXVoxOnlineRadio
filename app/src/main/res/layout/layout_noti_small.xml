@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:background="@color/black">
+
+    <ImageView
+        android:id="@+id/status_bar_album_art"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:src="@mipmap/ic_launcher"
+        android:padding="5dp"
+        android:gravity="center"
+        android:contentDescription="@string/todo" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:layout_marginStart="10dp"
+        android:orientation="vertical"
+        android:paddingEnd="11dp"
+        android:paddingStart="11dp" >
+
+        <TextView
+            android:id="@+id/status_bar_track_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/status_bar_artist_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/status_bar_collapse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
+        android:contentDescription="@string/todo" />
+
+</LinearLayout>

@@ -1,0 +1,113 @@
+plugins {
+    id 'com.android.application'
+    id 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+    id 'com.google.gms.google-services'
+}
+
+android {
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.vox.online.radio"
+        minSdk 21
+        targetSdk 33
+        versionCode 1
+        versionName "1.0.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    buildTypes.each {
+        it.buildConfigField 'String', 'BASE_URL', BASE_URL
+        it.buildConfigField 'String', 'ENC_KEY', ENC_KEY
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    namespace 'nemosofts.vox.radio'
+}
+
+
+dependencies {
+    // AndroidX and Google support library
+    implementation 'androidx.appcompat:appcompat:1.6.0'
+    implementation 'com.google.android.material:material:1.7.0'
+    implementation "androidx.annotation:annotation:1.5.0"
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'com.google.code.gson:gson:2.10'
+    implementation 'com.squareup.okhttp3:okhttp:4.9.0'
+    implementation 'com.google.android.play:core:1.10.3'
+    implementation files('libs/library.aar')
+    // Analytics
+    implementation platform('com.google.firebase:firebase-bom:30.5.0')
+    implementation 'com.google.firebase:firebase-analytics'
+    // Google Login
+    implementation 'com.google.android.gms:play-services-auth:19.2.0'
+    implementation 'com.google.firebase:firebase-core:21.0.0'
+    implementation 'com.google.firebase:firebase-auth:21.0.1'
+    // In app Messaging
+    implementation 'com.google.firebase:firebase-inappmessaging-display:20.2.0'
+    // Push notification
+    implementation 'com.onesignal:OneSignal:4.8.4'
+    // Encrypt and Decrypt
+    implementation 'com.yakivmospan:scytale:1.0.1'
+    // Image Library
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+    // Clear cache data
+    implementation 'commons-io:commons-io:2.6'
+
+    implementation 'com.romandanylyk:pageindicatorview:1.0.3@aar'
+    implementation 'com.tiagosantos:enchantedviewpager:1.1.0'
+    implementation 'androidx.palette:palette:1.0.0'
+    implementation 'com.github.jd-alexander:LikeButton:0.2.3'
+    implementation 'io.github.ShawnLin013:number-picker:2.4.13'
+    implementation 'com.github.jetradarmobile:android-snowfall:1.2.1'
+    implementation 'com.github.claucookie.miniequalizer:library:1.0.0'
+    implementation 'org.greenrobot:eventbus:3.3.1'
+    implementation 'com.sothree.slidinguppanel:library:3.4.0'
+    implementation 'com.github.claucookie.miniequalizer:library:1.0.0'
+
+    // Exoplayer
+    implementation 'com.google.android.exoplayer:exoplayer:2.18.1'
+    implementation 'com.google.android.exoplayer:exoplayer-hls:2.18.1'
+
+    implementation 'com.android.billingclient:billing:5.0.0'
+
+    // Mobile advertising
+    implementation 'com.wortise:android-sdk:1.4.1'
+    implementation 'com.startapp:inapp-sdk:4.10.5'
+    implementation 'com.unity3d.ads:unity-ads:4.4.1'
+    implementation 'com.applovin:applovin-sdk:11.5.4'
+    implementation 'com.ironsource.sdk:mediationsdk:7.2.4.1'
+    implementation 'com.ironsource.adapters:facebookadapter:4.3.30'
+    implementation 'com.facebook.android:facebook-android-sdk:15.1.0'
+    implementation 'com.google.ads.mediation:facebook:6.12.0.0'
+    implementation 'com.google.android.gms:play-services-ads:21.4.0'
+    implementation 'com.google.android.ads.consent:consent-library:1.0.8'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+//    implementation 'com.onesignal:OneSignal:[4.0.0, 4.99.99]'
+//    implementation 'com.onesignal:OneSignal:4.8.2'
+}

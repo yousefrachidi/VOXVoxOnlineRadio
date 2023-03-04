@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home"
+        android:title="@string/nav_home" />
+
+    <item
+        android:id="@+id/nav_latest"
+        android:icon="@drawable/ic_latest"
+        android:title="@string/latest" />
+
+    <item
+        android:id="@+id/nav_most"
+        android:icon="@drawable/ic_trending_up"
+        android:title="@string/most" />
+
+    <item
+        android:id="@+id/nav_category"
+        android:icon="@drawable/ic_folder"
+        android:title="@string/category" />
+
+    <item
+        android:id="@+id/nav_restore"
+        android:icon="@drawable/ic_restore"
+        android:title="@string/recent" />
+
+    <item
+        android:id="@+id/nav_countries"
+        android:icon="@drawable/ic_flag"
+        android:title="@string/countries" />
+
+    <item
+        android:id="@+id/nav_podcasts"
+        android:icon="@drawable/ic_podcasts"
+        android:title="@string/podcasts" />
+
+    <item
+        android:id="@+id/nav_fav"
+        android:icon="@drawable/ic_heart"
+        android:title="@string/favourite" />
+
+    <item
+        android:id="@+id/nav_rec"
+        android:icon="@drawable/ic_rec"
+        android:title="@string/recording" />
+
+    <item
+        android:id="@+id/nav_suggest"
+        android:icon="@drawable/ic_add"
+        android:title="@string/suggestion" />
+
+    <item
+        android:id="@+id/nav_profile"
+        android:icon="@drawable/ic_profile"
+        android:title="@string/nav_profile" />
+
+    <item
+        android:id="@+id/nav_settings"
+        android:icon="@drawable/ic_settings"
+        android:title="@string/nav_settings" />
+
+    <item
+        android:id="@+id/nav_login"
+        android:icon="@drawable/ic_login"
+        android:title="@string/login" />
+
+</menu>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/popup_drive_mode"
+        android:icon="@drawable/ic_option_directions"
+        android:title="@string/popup_drive_mode"/>
+
+    <item
+        android:id="@+id/popup_go_to_category"
+        android:icon="@drawable/ic_option_folder"
+        android:title="@string/popup_go_to_category"/>
+
+    <item
+        android:id="@+id/popup_description"
+        android:icon="@drawable/ic_lyrics"
+        android:title="@string/popup_description"/>
+</menu>

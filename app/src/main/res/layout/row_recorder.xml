@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_60sdp"
+    android:background="?colorBackground"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_width="@dimen/_52sdp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/play"
+                android:layout_width="@dimen/_52sdp"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/ic_play"
+                app:tint="?colorBackgroundTint" />
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/pause"
+                android:src="@drawable/ic_pause"
+                android:layout_width="@dimen/_52sdp"
+                android:layout_height="match_parent"
+                app:tint="?colorBackgroundTint"
+                android:contentDescription="@string/todo" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_width="@dimen/_1sdp"
+            android:background="?colorBorder"
+            android:layout_height="match_parent"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_marginStart="5dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:textAlignment="viewStart"
+                android:id="@+id/tv_songlist_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:text="@string/app_name"
+                android:maxLines="1"
+                android:textColor="?colorTitle"
+                android:textSize="@dimen/_11ssp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:textAlignment="viewStart"
+                android:textColor="?colorSubTitle"
+                android:id="@+id/tv_songlist_cat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@string/app_name"
+                android:textSize="@dimen/_9ssp" />
+
+            <TextView
+                android:textAlignment="viewStart"
+                android:textColor="?colorSubTitle"
+                android:id="@+id/tv_songlist_vie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@string/app_name"
+                android:textSize="@dimen/_9ssp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_option"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:background="@drawable/bar_selector_white"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/ic_more"
+            app:tint="?colorBackgroundTint" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_alignParentBottom="true"
+        android:background="?colorBorder"/>
+
+</RelativeLayout>

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="?colorBackground">
+
+    <RelativeLayout
+        android:id="@+id/rl_radio_list"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_65sdp">
+
+        <RelativeLayout
+            android:paddingTop="@dimen/_1sdp"
+            android:paddingBottom="@dimen/_1sdp"
+            android:layout_marginStart="@dimen/_10ssp"
+            android:id="@+id/rl_radio_img"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="match_parent">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/iv_radio_list"
+                android:layout_width="@dimen/_52sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:layout_marginEnd="@dimen/_3sdp"
+                android:layout_marginBottom="@dimen/_3sdp"
+                android:contentDescription="@string/todo"
+                android:scaleType="fitXY"
+                android:src="@drawable/logo"
+                app:riv_border_color="?colorBorder"
+                app:riv_border_width="@dimen/_1sdp"
+                app:riv_corner_radius="@dimen/_3sdp" />
+
+            <es.claucookie.miniequalizerlibrary.EqualizerView
+                android:id="@+id/equalizer_radio_list"
+                android:layout_width="19dp"
+                android:layout_height="17dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:visibility="invisible"
+                app:animDuration="3000"
+                app:foregroundColor="?colorAccent" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:paddingStart="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_5sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toStartOf="@+id/iv_radio_fav_list"
+            android:layout_toEndOf="@+id/rl_radio_img">
+
+            <TextView
+                android:id="@+id/tv_radio_list_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@string/app_name"
+                android:textAlignment="viewStart"
+                android:textColor="?colorTitle"
+                android:textSize="@dimen/_10ssp" />
+
+            <TextView
+                android:id="@+id/tv_radio_list_cat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_radio_list_name"
+                android:layout_marginTop="2dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingStart="1dp"
+                android:paddingEnd="1dp"
+                android:text="@string/app_name"
+                android:textAlignment="viewStart"
+                android:textColor="?colorSubTitle"
+                android:textSize="@dimen/_8ssp" />
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_below="@+id/tv_radio_list_cat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:textSize="@dimen/_10ssp"
+                    android:id="@+id/tv_radio_list_premium"
+                    android:text="Premium"
+                    android:paddingStart="@dimen/_3sdp"
+                    android:paddingEnd="@dimen/_3sdp"
+                    android:paddingBottom="@dimen/_1sdp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/bg_pre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_2sdp"
+                    tools:ignore="HardcodedText" />
+
+                <RatingBar
+                    android:id="@+id/rb_radio_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:max="5"
+                    android:numStars="5"
+                    style="@style/RatingBar_white" />
+
+                <TextView
+                    android:id="@+id/tv_radio_list_avg_rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:background="@drawable/bg_round"
+                    android:backgroundTint="?attr/colorAccent_50"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/_3sdp"
+                    android:paddingEnd="@dimen/_3sdp"
+                    android:text="32"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/_8ssp"
+                    tools:ignore="HardcodedText"/>
+
+                <ImageView
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:src="@drawable/ic_view"
+                    app:tint="#FF9800"
+                    android:contentDescription="@string/todo" />
+
+                <TextView
+                    android:id="@+id/tv_radio_list_views"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_1sdp"
+                    android:gravity="center"
+                    android:text="25"
+                    android:textColor="?colorSubTitle"
+                    android:textSize="@dimen/_9ssp"
+                    tools:ignore="HardcodedText"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <com.like.LikeButton
+            android:id="@+id/iv_radio_fav_list"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="5dp"
+            android:layout_toStartOf="@+id/iv_list_option"
+            app:anim_scale_factor="2"
+            app:circle_end_color="#00BCD4"
+            app:circle_start_color="#FF0070"
+            app:dots_primary_color="#00BCD4"
+            app:dots_secondary_color="#FF0070"
+            app:icon_size="@dimen/_25sdp"
+            app:is_enabled="true"
+            app:like_drawable="@drawable/ic_bookmark"
+            app:unlike_drawable="@drawable/ic_bookmark2" />
+
+        <ImageView
+            android:id="@+id/iv_list_option"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:background="@drawable/bar_selector_white"
+            android:src="@drawable/ic_more"
+            app:tint="?colorBackgroundTint"
+            android:contentDescription="@string/todo"/>
+
+    </RelativeLayout>
+
+    <View
+        android:background="?colorBorder"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_native_ad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorBackground"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:visibility="gone"/>
+
+</LinearLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "684595626661",
+    "project_id": "v6-1-853e0",
+    "storage_bucket": "v6-1-853e0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:684595626661:android:0100e94a4ca261b78c034c",
+        "android_client_info": {
+          "package_name": "com.vox.online.radio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "684595626661-l1d4rgrqok5kpi6mc99mt4c2biul8oqn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTSXvXVV8QjlbVJuHXlmfPuHBEYP1iAns"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "684595626661-l1d4rgrqok5kpi6mc99mt4c2biul8oqn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

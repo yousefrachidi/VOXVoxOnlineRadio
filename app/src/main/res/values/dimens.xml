@@ -1,0 +1,8 @@
+<resources>
+
+    <dimen name="bottom_menu">50dp</dimen>
+    <dimen name="player_panel_height">100dp</dimen>
+
+    <dimen name="banner_height">50dp</dimen>
+
+</resources>

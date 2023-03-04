@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:layoutDirection="ltr"
+    android:paddingStart="@dimen/_5sdp"
+    android:paddingEnd="@dimen/_5sdp">
+
+    <ImageView
+        android:id="@+id/iv_radio_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_radio_previous"
+        app:layout_constraintEnd_toStartOf="@+id/iv_radio_previous"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_radio_previous"
+        android:src="@drawable/ic_stopwatch"
+        app:tint="?colorBackgroundTint"
+        android:contentDescription="@string/todo" />
+
+    <ImageView
+        android:id="@+id/iv_radio_previous"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/ppv_radio_play"
+        app:layout_constraintEnd_toStartOf="@+id/ppv_radio_play"
+        app:layout_constraintStart_toEndOf="@+id/iv_radio_timer"
+        app:layout_constraintTop_toTopOf="@+id/ppv_radio_play"
+        app:srcCompat="@drawable/ic_skip_previous"
+        app:tint="?colorBackgroundTint"
+        android:contentDescription="@string/todo" />
+
+    <androidx.nemosofts.lk.view.PlayPauseView
+        android:id="@+id/ppv_radio_play"
+        android:layout_width="@dimen/_45sdp"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/iv_radio_next"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/iv_radio_previous"
+        app:layout_constraintTop_toTopOf="parent"
+        android:clickable="true"
+        android:focusable="true"
+        android:stateListAnimator="@drawable/btn_elevation"
+        app:fill_color="@color/white"
+        app:pause_bg="?attr/colorAccent"
+        app:play_bg="?attr/colorAccent" />
+
+    <RelativeLayout
+        android:translationZ="10dp"
+        android:id="@+id/rl_radio_loading"
+        android:layout_width="@dimen/_45sdp"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/iv_radio_next"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/iv_radio_previous"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone">
+
+        <ImageView
+            android:padding="@dimen/_10sdp"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/abs_history_playlist"
+            android:backgroundTint="?colorAccent"
+            android:src="@drawable/ic_close_white"
+            android:contentDescription="@string/todo" />
+
+        <ProgressBar
+            android:theme="@style/CircularProgressWhite"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:indeterminate="true" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_radio_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/ppv_radio_play"
+        app:layout_constraintEnd_toStartOf="@+id/iv_radio_microphone"
+        app:layout_constraintStart_toEndOf="@+id/ppv_radio_play"
+        app:layout_constraintTop_toTopOf="@+id/ppv_radio_play"
+        app:srcCompat="@drawable/ic_skip_next"
+        app:tint="?colorBackgroundTint"
+        android:contentDescription="@string/todo" />
+
+    <ImageView
+        android:id="@+id/iv_radio_microphone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_radio_next"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_radio_next"
+        app:layout_constraintTop_toTopOf="@+id/iv_radio_next"
+        app:srcCompat="@drawable/ic_microphone"
+        android:contentDescription="@string/todo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

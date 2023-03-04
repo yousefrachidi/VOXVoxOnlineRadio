@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?colorBackground">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_160sdp">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/material_design_default" />
+
+                <com.jetradarmobile.snowfall.SnowfallView
+                    android:id="@+id/view_snow"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:snowflakeSpeedMax="3"
+                    app:snowflakesNum="10"
+                    android:visibility="gone"/>
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/iv_episode"
+                    android:layout_centerVertical="true"
+                    android:layout_width="@dimen/_120sdp"
+                    android:layout_height="@dimen/_120sdp"
+                    android:layout_marginStart="@dimen/_30sdp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/material_design_default"
+                    app:riv_border_color="@color/white"
+                    app:riv_border_width="2dp"
+                    app:riv_corner_radius="@dimen/_5sdp" />
+
+            </RelativeLayout>
+
+            <include android:id="@+id/vi_row_play_all"
+                layout="@layout/row_play_all" />
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layoutAnimation="@anim/layout_animation_from_bottom"/>
+
+                <FrameLayout
+                    android:id="@+id/fl_empty"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="?attr/actionBarSize" />
+
+                <ProgressBar
+                    android:id="@+id/pb"
+                    android:progressTint="?colorAccent"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_centerInParent="true" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="50dp"
+        android:src="@drawable/ic_arrow_up"
+        android:tint="@color/white"
+        android:visibility="invisible"
+        app:fabSize="normal"
+        android:contentDescription="@string/todo" />
+
+</RelativeLayout>

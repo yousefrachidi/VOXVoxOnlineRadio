@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?colorBackground">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:title="@string/app_name"
+        app:navigationIcon="?iconBackspace"
+        android:paddingEnd="@dimen/_5sdp"
+        android:paddingStart="@dimen/_1sdp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@id/toolbar"
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layoutAnimation="@anim/layout_animation_from_bottom"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="50dp"
+        android:src="@drawable/ic_arrow_up"
+        android:tint="@color/white"
+        android:visibility="invisible"
+        app:fabSize="normal"
+        android:contentDescription="@string/todo" />
+
+    <FrameLayout
+        android:id="@+id/fl_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="?attr/actionBarSize" />
+
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/pb"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_centerInParent="true"
+        android:progressTint="?colorAccent" />
+
+
+</RelativeLayout>

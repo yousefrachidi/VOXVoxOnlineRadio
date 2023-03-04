@@ -1,0 +1,67 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        tools:ignore="UselessParent">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:padding="1dp"
+            android:src="@color/blue_grey_inactive"
+            android:id="@+id/image"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_centerInParent="true"
+            android:scaleType="centerCrop"
+            app:riv_mutate_background="false"
+            app:riv_oval="true" />
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/background"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:background="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="RelativeOverlap,RtlHardcoded"/>
+
+
+        <RelativeLayout
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_vp_play"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:translationZ="1dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/abs_history_playlist"
+                android:src="@drawable/ic_play"
+                android:backgroundTint="?colorAccent"
+                app:tint="@color/white"
+                android:contentDescription="@string/todo" />
+
+            <ProgressBar
+                android:padding="4dp"
+                android:id="@+id/loading"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

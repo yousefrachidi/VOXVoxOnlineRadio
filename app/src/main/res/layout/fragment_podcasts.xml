@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:visibility="visible"
+                android:id="@+id/ll_latest_podcasts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:padding="@dimen/_4sdp"
+                        android:text="@string/podcasts"
+                        android:textAlignment="viewStart"
+                        android:textColor="?colorTitle"
+                        android:textSize="@dimen/_15sdp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_see_podcasts"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:background="?attr/selectableItemBackground">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/_5sdp"
+                            android:text="See All"
+                            android:textAlignment="viewStart"
+                            android:textColor="?colorSubTitle"
+                            android:textSize="@dimen/_13sdp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
+                        <ImageView
+                            android:layout_width="@dimen/_18sdp"
+                            android:layout_height="@dimen/_18sdp"
+                            android:background="@drawable/bg_round_arrow_right"
+                            android:contentDescription="@string/todo"
+                            android:src="@drawable/ic_round_arrow_right" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_latest_podcasts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_15sdp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/ll_recent_podcasts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:padding="@dimen/_5sdp"
+                        android:text="@string/recent_played"
+                        android:textAlignment="viewStart"
+                        android:textColor="?colorSubTitle"
+                        android:textSize="@dimen/_15sdp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_recent_podcasts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <ProgressBar
+        android:id="@+id/pb_home_podcasts"
+        android:progressTint="?colorAccent"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>

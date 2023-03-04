@@ -1,0 +1,73 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/backgroundLight</item>
+        <item name="colorPrimaryDark">@color/backgroundLight</item>
+        <item name="colorAccent">@color/colorAccentLight</item>
+        <item name="colorAccent_50">@color/colorAccentLight_50</item>
+        <item name="iconBackspace">@drawable/ic_backspace_black</item>
+        <item name="colorBackground">@color/backgroundLight</item>
+        <item name="colorBackgroundTint">@color/backgroundNight</item>
+        <item name="colorSubBackground">@color/backgroundLight_S</item>
+        <item name="colorTitle">@color/titleLight</item>
+        <item name="colorSubTitle">@color/subTitleLight</item>
+        <item name="colorBorder">@color/borderLight</item>
+        <item name="colorBackgroundDialog">@color/backgroundLight</item>
+        <item name="colorSubBackgroundDialog">@color/backgroundLight_S</item>
+    </style>
+
+    <style name="ToolbarTextAppearanceNormal">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:letterSpacing">0.0125</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+    <!--   ThemeDialog  -->
+    <style name="ThemeDialog" parent="@style/Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <!-- Used for the title and text -->
+        <item name="android:textColor">?colorTitle</item>
+        <item name="android:textColorAlertDialogListItem">?colorTitle</item>
+        <item name="android:textColorSecondary">?colorTitle</item>
+        <!-- Used for the background -->
+        <item name="android:background">?colorSubBackground</item>
+        <!-- Used for the Button -->
+        <item name="buttonBarNegativeButtonStyle">@style/ButtonStyle</item>
+        <item name="buttonBarPositiveButtonStyle">@style/ButtonStyle</item>
+    </style>
+
+    <style name="ButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">?colorTitle</item>
+    </style>
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_up_dialog</item>
+        <item name="android:windowExitAnimation">@anim/slide_down_dialog</item>
+    </style>
+
+    <style name="RatingBar_white" parent="android:style/Widget.Material.RatingBar.Small">
+        <item name="colorControlNormal">?colorSubTitle</item>
+        <item name="colorControlActivated">?colorAccent</item>
+    </style>
+
+    <style name="RatingBarDialog" parent="Theme.AppCompat">
+        <item name="colorControlNormal">?colorSubTitle</item>
+        <item name="colorControlActivated">#FF9800</item>
+    </style>
+
+    <style name="CircularProgressWhite" parent="Theme.AppCompat.Light">
+        <item name="colorAccent">#FFFFFF</item>
+    </style>
+
+    <style name="TextViewNormal" parent="">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="PopupMenuLight" parent="ThemeOverlay.AppCompat.Light"/>
+    <style name="PopupMenuDark" parent="ThemeOverlay.AppCompat.Dark"/>
+
+
+</resources>

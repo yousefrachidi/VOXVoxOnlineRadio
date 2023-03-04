@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.LoginActivity"
+    android:background="?colorBackground">
+
+    <RelativeLayout
+        android:layout_above="@+id/ll_login_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/todo"
+            android:scaleType="fitEnd"
+            android:src="@drawable/fingerprint" />
+
+        <TextView
+            android:id="@+id/tv_welcome"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_alignParentTop="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:text="@string/welcome"
+            android:textAlignment="viewStart"
+            android:textColor="?attr/colorAccent"
+            android:textSize="@dimen/_20ssp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_welcome"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:text="@string/sign_in_to_continue"
+            android:textAlignment="viewStart"
+            android:textColor="?attr/colorSubTitle"
+            android:textSize="@dimen/_12ssp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_login_view"
+        android:paddingBottom="@dimen/_15sdp"
+        android:paddingEnd="@dimen/_15sdp"
+        android:paddingStart="@dimen/_15sdp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:contentDescription="@string/todo"
+                android:padding="@dimen/_9sdp"
+                android:src="@drawable/ic_email"
+                app:tint="?colorSubTitle" />
+
+            <EditText
+                android:id="@+id/et_login_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="@string/email_id"
+                android:importantForAutofill="no"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:padding="@dimen/_5sdp"
+                android:textColor="?colorTitle"
+                android:textColorHint="?colorSubTitle"
+                android:textSize="@dimen/_12ssp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginStart="@dimen/_35sdp"
+            android:background="?colorBorder" />
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:contentDescription="@string/todo"
+                    android:padding="@dimen/_9sdp"
+                    android:src="@drawable/ic_lock"
+                    app:tint="?colorSubTitle" />
+
+                <EditText
+                    android:id="@+id/et_login_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/password"
+                    android:importantForAutofill="no"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:padding="@dimen/_5sdp"
+                    android:textColor="?colorTitle"
+                    android:textColorHint="?colorSubTitle"
+                    android:textSize="@dimen/_12ssp"
+                    android:layout_marginEnd="@dimen/_35sdp" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_visibility"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/bar_selector"
+                android:contentDescription="@string/todo"
+                android:padding="@dimen/_9sdp"
+                android:src="@drawable/ic_login_visibility_off"
+                app:tint="?colorSubTitle" />
+
+        </RelativeLayout>
+
+        <View
+            android:background="?colorBorder"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginStart="@dimen/_35sdp" />
+
+        <LinearLayout
+            android:id="@+id/ll_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/_5sdp"
+            tools:ignore="UselessParent">
+
+            <androidx.nemosofts.lk.view.SmoothCheckBox
+                android:id="@+id/cb_remember_me"
+                android:layout_width="@dimen/_16sdp"
+                android:layout_height="@dimen/_16sdp"
+                app:smoothCheckBox_color_unchecked_stroke="?colorBorder"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:text="@string/remember_me"
+                android:textColor="?colorSubTitle"
+                android:textSize="@dimen/_11ssp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_login_btn"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_38sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_login_btn"
+                android:gravity="center"
+                android:text="@string/login"
+                android:textColor="?colorBackground"
+                android:textSize="@dimen/_15ssp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_skip_btn"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_38sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_login_skip_btn"
+                android:gravity="center"
+                android:text="@string/skip"
+                android:textColor="?colorSubTitle"
+                android:textSize="@dimen/_15ssp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_forgot_pass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:padding="@dimen/_8sdp"
+            android:text="@string/forgot_pass"
+            android:textColor="?colorAccent"
+            android:textSize="@dimen/_11ssp"
+            android:background="?attr/selectableItemBackground"/>
+
+        <LinearLayout
+            android:id="@+id/ll_login_google"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/bg_login_skip_btn"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_10sdp">
+
+            <ImageView
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:contentDescription="@string/todo"
+                android:padding="@dimen/_9sdp"
+                android:src="@drawable/ic_google" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/login_with_google"
+                android:textColor="?colorTitle"
+                android:textSize="@dimen/_12ssp"
+                android:layout_marginEnd="@dimen/_15sdp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_login_sign"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/new_to_logistics"
+                android:textColor="?colorSubTitle"
+                android:textSize="@dimen/_11ssp" />
+
+            <TextView
+                android:id="@+id/tv_login_signup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/_5sdp"
+                android:paddingEnd="@dimen/_5sdp"
+                android:text="@string/register"
+                android:textColor="?colorAccent"
+                android:textSize="@dimen/_11ssp"
+                tools:ignore="TextContrastCheck"
+                android:background="?attr/selectableItemBackground"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_gravity="center"
+            android:background="?colorAccent"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_2sdp"
+            android:layout_marginTop="@dimen/_5sdp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

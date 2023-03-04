@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?colorBackground"
+    tools:context=".activity.SettingLayoutActivity"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:background="?colorBackground"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        app:titleTextColor="?colorBackgroundTint"
+        app:navigationIcon="?iconBackspace"
+        app:title="@string/settings"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_height="wrap_content"
+        app:titleTextAppearance="@style/ToolbarTextAppearanceNormal" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/todo"
+                    android:padding="@dimen/_10sdp"
+                    android:src="@drawable/ic_slider_horizontal"
+                    app:tint="@color/color_setting_1" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/banner"
+                        android:textAlignment="viewStart"
+                        android:textColor="?attr/colorTitle"
+                        android:textSize="@dimen/_13ssp"
+                        android:textStyle="bold"
+                        tools:ignore="NestedWeights" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/use_scale_the_home_banner"
+                        android:textAlignment="viewStart"
+                        android:textColor="?attr/colorSubTitle"
+                        android:textSize="@dimen/_11ssp" />
+
+                </LinearLayout>
+
+                <androidx.nemosofts.lk.view.SwitchButton
+                    android:id="@+id/switch_scale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:minHeight="@dimen/_38sdp"
+                    app:sb_checked="true" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="?colorBorder" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

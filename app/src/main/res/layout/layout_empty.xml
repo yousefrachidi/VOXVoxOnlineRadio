@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="@dimen/_6sdp">
+
+    <TextView
+        android:id="@+id/tv_empty_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_5sdp"
+        android:text="@string/error_no_data_found"
+        android:textColor="?colorTitle"
+        android:textSize="@dimen/_12ssp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/btn_empty_try"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_30sdp"
+        android:background="@drawable/bg_btn"
+        android:gravity="center"
+        android:text="Refresh"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_13ssp"
+        android:paddingStart="@dimen/_15sdp"
+        android:paddingEnd="@dimen/_15sdp"
+        tools:ignore="HardcodedText" />
+
+</LinearLayout>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/_100sdp"
+    android:id="@+id/rl_radio_home"
+    android:background="@drawable/bg_home_card"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_10sdp"
+    android:layout_marginTop="@dimen/_5sdp">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/iv_radio"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_marginStart="@dimen/_1sdp"
+        android:layout_marginTop="@dimen/_1sdp"
+        android:layout_marginEnd="@dimen/_1sdp"
+        android:layout_marginBottom="@dimen/_1sdp"
+        android:padding="@dimen/_1sdp"
+        android:scaleType="center"
+        android:src="@drawable/logo"
+        app:riv_border_color="?colorSubBackground"
+        app:riv_corner_radius_top_left="@dimen/_5sdp"
+        app:riv_corner_radius_top_right="@dimen/_5sdp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_marginStart="@dimen/_1sdp"
+        android:layout_marginTop="@dimen/_1sdp"
+        android:layout_marginEnd="@dimen/_1sdp"
+        android:layout_marginBottom="@dimen/_1sdp">
+
+        <TextView
+            android:id="@+id/tv_radio_premium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_1sdp"
+            android:background="@drawable/bg_pre_home"
+            android:paddingLeft="@dimen/_5sdp"
+            android:paddingRight="@dimen/_5sdp"
+            android:text="Premium"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"
+            tools:ignore="HardcodedText" />
+
+        <ImageView
+            android:id="@+id/iv_play"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/ic_play"
+            app:tint="@color/white" />
+
+        <es.claucookie.miniequalizerlibrary.EqualizerView xmlns:custom="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/equalizer_view"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            custom:animDuration="3000"
+            custom:foregroundColor="?colorAccent" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/iv_radio"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:orientation="vertical">
+
+        <com.like.LikeButton
+            android:id="@+id/iv_radio_fav"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:padding="@dimen/_3sdp"
+            app:anim_scale_factor="2"
+            app:circle_end_color="#00BCD4"
+            app:circle_start_color="#FF0070"
+            app:dots_primary_color="#00BCD4"
+            app:dots_secondary_color="#FF0070"
+            app:icon_size="@dimen/_20sdp"
+            app:is_enabled="true"
+            app:like_drawable="@drawable/ic_bookmark"
+            app:unlike_drawable="@drawable/ic_bookmark2"
+            tools:ignore="RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/tv_radio_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_marginEnd="@dimen/_2sdp"
+            android:layout_toStartOf="@+id/iv_radio_fav"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/app_name"
+            android:textColor="?attr/colorBackgroundTint"
+            android:textSize="@dimen/_10ssp" />
+
+        <TextView
+            android:id="@+id/tv_radio_cat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_radio_name"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_2sdp"
+            android:layout_toStartOf="@+id/iv_radio_fav"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/app_name"
+            android:textColor="?attr/colorSubTitle"
+            android:textSize="@dimen/_8ssp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

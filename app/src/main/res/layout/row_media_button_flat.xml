@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:layoutDirection="ltr"
+    android:paddingStart="@dimen/_15sdp"
+    android:paddingEnd="@dimen/_15sdp">
+
+    <androidx.nemosofts.lk.view.PlayPauseView
+        android:id="@+id/ppv_radio_play"
+        android:layout_width="@dimen/_45sdp"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:clickable="true"
+        android:focusable="true"
+        android:stateListAnimator="@drawable/btn_elevation"
+        app:fill_color="@color/white"
+        app:pause_bg="?attr/colorAccent"
+        app:play_bg="?attr/colorAccent" />
+
+    <RelativeLayout
+        android:layout_centerVertical="true"
+        android:translationZ="10dp"
+        android:id="@+id/rl_radio_loading"
+        android:layout_width="@dimen/_45sdp"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:visibility="gone">
+
+        <ImageView
+            android:padding="@dimen/_10sdp"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/abs_history_playlist"
+            android:backgroundTint="?colorAccent"
+            android:src="@drawable/ic_close_white"
+            android:contentDescription="@string/todo" />
+
+        <ProgressBar
+            android:theme="@style/CircularProgressWhite"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:indeterminate="true" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/iv_radio_previous"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/todo" />
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/iv_radio_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/todo"/>
+
+    <ImageView
+        android:id="@+id/iv_radio_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/iv_radio_microphone"
+        android:contentDescription="@string/todo"
+        android:padding="@dimen/_10sdp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_stopwatch"
+        app:tint="?colorBackgroundTint" />
+
+    <ImageView
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/iv_radio_microphone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/ic_microphone"
+        android:contentDescription="@string/todo" />
+
+</RelativeLayout>

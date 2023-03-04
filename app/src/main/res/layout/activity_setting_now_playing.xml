@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?colorBackground"
+    tools:context=".activity.SettingNowPlayingActivity"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:background="?colorBackground"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        app:titleTextColor="?colorBackgroundTint"
+        app:navigationIcon="?iconBackspace"
+        app:title="@string/settings"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_height="wrap_content"
+        app:titleTextAppearance="@style/ToolbarTextAppearanceNormal" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:background="?attr/selectableItemBackground"
+                android:id="@+id/ll_now_playing"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                tools:ignore="RtlSymmetry">
+
+                <ImageView
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/todo"
+                    android:padding="@dimen/_10sdp"
+                    android:src="@drawable/ic_play"
+                    app:tint="@color/color_setting_1" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/now_playing_theme"
+                        android:textAlignment="viewStart"
+                        android:textColor="?attr/colorTitle"
+                        android:textSize="@dimen/_13ssp"
+                        android:textStyle="bold"
+                        tools:ignore="NestedWeights" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/customize_your_now_playing_theme"
+                        android:textAlignment="viewStart"
+                        android:textColor="?attr/colorSubTitle"
+                        android:textSize="@dimen/_11ssp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="?colorBorder" />
+
+            <LinearLayout
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/todo"
+                    android:padding="@dimen/_10sdp"
+                    android:src="@drawable/ic_volume_up"
+                    app:tint="@color/color_setting_2" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/volume_controls"
+                        android:textAlignment="viewStart"
+                        android:textColor="?attr/colorTitle"
+                        android:textSize="@dimen/_13ssp"
+                        android:textStyle="bold"
+                        tools:ignore="NestedWeights" />
+
+                    <TextView
+                        android:layout_marginBottom="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/show_volume_controls"
+                        android:textAlignment="viewStart"
+                        android:textColor="?attr/colorSubTitle"
+                        android:textSize="@dimen/_11ssp" />
+
+                </LinearLayout>
+
+                <androidx.nemosofts.lk.view.SwitchButton
+                    android:id="@+id/switch_volume"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:minHeight="@dimen/_38sdp"
+                    app:sb_checked="true" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="?colorBorder" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/todo"
+                    android:padding="@dimen/_10sdp"
+                    android:src="@drawable/ic_bubble"
+                    app:tint="@color/color_setting_3" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/snow_fall_effect"
+                        android:textAlignment="viewStart"
+                        android:textColor="?attr/colorTitle"
+                        android:textSize="@dimen/_13ssp"
+                        android:textStyle="bold"
+                        tools:ignore="NestedWeights" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/only_support_night_mode"
+                        android:textAlignment="viewStart"
+                        android:textColor="?attr/colorSubTitle"
+                        android:textSize="@dimen/_11ssp" />
+
+                </LinearLayout>
+
+                <androidx.nemosofts.lk.view.SwitchButton
+                    android:id="@+id/switch_snow_fall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:minHeight="@dimen/_38sdp"
+                    app:sb_checked="true" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="?colorBorder" />
+
+
+            <LinearLayout
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingEnd="@dimen/_10sdp"
+                tools:ignore="RtlSymmetry">
+
+                <ImageView
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/todo"
+                    android:padding="@dimen/_10sdp"
+                    android:src="@drawable/ic_blur"
+                    app:tint="@color/color_setting_4" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:textAlignment="viewStart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/blur_amount"
+                        android:textSize="@dimen/_13ssp"
+                        android:textColor="?attr/colorTitle"
+                        tools:ignore="NestedWeights" />
+
+                    <RelativeLayout
+                        android:layout_marginEnd="10dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <SeekBar
+                            android:id="@+id/sb_blur_now"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="20dp"
+                            android:layout_toStartOf="@+id/tv_blur_now"
+                            android:padding="3dp" />
+
+                        <TextView
+                            android:id="@+id/tv_blur_now"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:text="20"
+                            android:textSize="@dimen/_10sdp"
+                            tools:ignore="HardcodedText" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:textAlignment="viewStart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_11ssp"
+                        android:text="@string/amount_of_blur"
+                        android:textColor="?attr/colorSubTitle" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="?colorBorder" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

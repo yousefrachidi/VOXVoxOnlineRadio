@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.DriveModeActivity">
+
+    <ImageView
+        android:id="@+id/iv_drive_mode"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/todo"
+        android:scaleType="centerCrop"
+        android:src="@drawable/placeholder_song_night" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/view_1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:background="@drawable/bg_drive_mode_top" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <View
+            android:id="@+id/view_2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:background="@drawable/bg_drive_mode_bottom" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="@dimen/_15sdp"
+        android:padding="@dimen/_15sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_drive_mode_close"
+            android:layout_alignParentStart="true"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:padding="@dimen/_10sdp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/bar_selector_white"
+            android:src="@drawable/ic_close_white"
+            android:contentDescription="@string/todo"
+            app:tint="@color/white" />
+
+        <ImageView
+            android:layout_centerHorizontal="true"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:padding="@dimen/_10sdp"
+            android:src="@drawable/ic_directions_car"
+            android:contentDescription="@string/todo"
+            app:tint="@color/white" />
+
+        <ImageView
+            android:id="@+id/iv_drive_mode_fav"
+            android:layout_alignParentEnd="true"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:padding="@dimen/_10sdp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/bar_selector_white"
+            android:src="@drawable/ic_favorite_border"
+            android:contentDescription="@string/todo"
+            app:tint="@color/white" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/_100sdp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:padding="@dimen/_10sdp"
+                android:id="@+id/iv_drive_mode_add"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:src="@drawable/logo"
+                app:riv_corner_radius="@dimen/_5sdp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:padding="@dimen/_15sdp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2">
+
+            <TextView
+                android:id="@+id/tv_title_drive_mode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:padding="@dimen/_15sdp"
+                android:text="@string/app_name"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_20ssp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/ll_player"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+               android:layout_alignParentBottom="true"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:padding="20dp"
+                tools:ignore="UselessParent">
+
+                <ImageView
+                    android:id="@+id/iv_music_previous"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bar_selector_white"
+                    android:clickable="true"
+                    android:contentDescription="@string/todo"
+                    android:focusable="true"
+                    android:src="@drawable/ic_skip_previous"
+                    app:tint="@color/white" />
+
+                <ProgressBar
+                    android:id="@+id/pb_music_loading"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_weight="1"
+                    android:indeterminate="true"
+                    android:theme="@style/CircularProgressWhite"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/iv_music_play"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bar_selector_white"
+                    android:clickable="true"
+                    android:contentDescription="@string/todo"
+                    android:focusable="true"
+                    android:src="@drawable/ic_play"
+                    app:tint="@color/white" />
+
+                <ImageView
+                    android:id="@+id/iv_music_next"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bar_selector_white"
+                    android:clickable="true"
+                    android:contentDescription="@string/todo"
+                    android:focusable="true"
+                    android:src="@drawable/ic_skip_next"
+                    app:tint="@color/white" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_5sdp"
+    android:orientation="horizontal"
+    android:baselineAligned="false">
+
+    <RelativeLayout
+        android:id="@+id/rl_play_all"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:background="@drawable/bg_play_all"
+        android:backgroundTint="?colorAccent"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_weight="2">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/selectableItemBackground">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                tools:ignore="UseCompoundDrawables,UselessParent">
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:contentDescription="@string/todo"
+                    android:gravity="center"
+                    android:src="@drawable/ic_play"
+                    app:tint="@color/white"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:gravity="center"
+                    android:text="Play all"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10ssp"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_share"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:background="@drawable/bg_play_all"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_weight="1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/selectableItemBackground">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                tools:ignore="UseCompoundDrawables,UselessParent">
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:contentDescription="@string/todo"
+                    android:gravity="center"
+                    android:padding="@dimen/_1sdp"
+                    android:src="@drawable/ic_share"
+                    app:tint="?colorAccent" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_lyrics"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:background="@drawable/bg_play_all"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_weight="1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/selectableItemBackground">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                tools:ignore="UseCompoundDrawables,UselessParent">
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:contentDescription="@string/todo"
+                    android:gravity="center"
+                    android:padding="@dimen/_1sdp"
+                    android:src="@drawable/ic_lyrics"
+                    app:tint="?colorAccent" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>
