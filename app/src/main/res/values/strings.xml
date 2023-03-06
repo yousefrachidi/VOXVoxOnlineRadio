@@ -1,13 +1,13 @@
 <resources>
-    <string name="app_name">VOX Online Radio</string>
+    <string name="app_name">Radio France</string>
 
     <string name="facebook_app_id">234234234234324</string>
     <string name="admob_app_id">ca-app-pub-3940256099942544~3347511713</string>
     <string name="applovin_id">F9VAb231d3sd2d328JB0k-qedqwd3dd13sdf1d2s3</string>
     <string name="wortise_app_id">00000000-0000-0000-0000-123456789abc</string>
-    <string name="onesignal_app_id">xxxxxxxx-xxxxx-xxxxx-xxxxx-xxxxxxxx</string>
+    <string name="onesignal_app_id">c0a50be6-66d0-4782-9ba3-17efc596b46b</string>
 
-    <string name="made_with_in">Made With ❤ in Sri Lanka</string>
+    <string name="made_with_in">Made With ❤ in Youra</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -17,7 +17,7 @@
     <string name="nav_home">Home</string>
     <string name="nav_settings">Settings</string>
     <string name="nav_profile">Profile</string>
-    category
+
     <string name="home">Home</string>
     <string name="latest">Latest</string>
     <string name="most">Most View</string>

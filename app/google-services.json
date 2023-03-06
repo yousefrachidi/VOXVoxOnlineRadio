@@ -1,33 +1,34 @@
 {
   "project_info": {
-    "project_number": "684595626661",
-    "project_id": "v6-1-853e0",
-    "storage_bucket": "v6-1-853e0.appspot.com"
+    "project_number": "71779720695",
+    "firebase_url": "https://radio-fr-131a6-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "radio-fr-131a6",
+    "storage_bucket": "radio-fr-131a6.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:684595626661:android:0100e94a4ca261b78c034c",
+        "mobilesdk_app_id": "1:71779720695:android:93ab17ffda9796976122f2",
         "android_client_info": {
-          "package_name": "com.vox.online.radio"
+          "package_name": "com.youra.radiofr"
         }
       },
       "oauth_client": [
         {
-          "client_id": "684595626661-l1d4rgrqok5kpi6mc99mt4c2biul8oqn.apps.googleusercontent.com",
+          "client_id": "71779720695-i1i93uldq7g2958skjmqf1k42rd6abhi.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBTSXvXVV8QjlbVJuHXlmfPuHBEYP1iAns"
+          "current_key": "AIzaSyAAyDtXoRGf2efXT8yDgc7TJw8ASa0_bJ0"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "684595626661-l1d4rgrqok5kpi6mc99mt4c2biul8oqn.apps.googleusercontent.com",
+              "client_id": "71779720695-i1i93uldq7g2958skjmqf1k42rd6abhi.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

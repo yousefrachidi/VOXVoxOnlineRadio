@@ -2,13 +2,14 @@ plugins {
     id 'com.android.application'
     id 'com.onesignal.androidsdk.onesignal-gradle-plugin'
     id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
 }
 
 android {
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.vox.online.radio"
+        applicationId "com.youra.radiofr"
         minSdk 21
         targetSdk 33
         versionCode 1
@@ -20,8 +21,18 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            manifestPlaceholders = [crashlyticsCollectionEnabled: "true"]
+            debuggable false
+        }
+        debug {
+            crunchPngs false
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            manifestPlaceholders = [crashlyticsCollectionEnabled: "false"]
+            debuggable true
         }
     }
 
@@ -42,7 +53,7 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
-    namespace 'nemosofts.vox.radio'
+    namespace 'com.youra.radiofr'
 }
 
 
@@ -61,10 +72,14 @@ dependencies {
     // Analytics
     implementation platform('com.google.firebase:firebase-bom:30.5.0')
     implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-crashlytics'
+
     // Google Login
     implementation 'com.google.android.gms:play-services-auth:19.2.0'
     implementation 'com.google.firebase:firebase-core:21.0.0'
     implementation 'com.google.firebase:firebase-auth:21.0.1'
+
+
     // In app Messaging
     implementation 'com.google.firebase:firebase-inappmessaging-display:20.2.0'
     // Push notification
@@ -92,7 +107,7 @@ dependencies {
     implementation 'com.google.android.exoplayer:exoplayer:2.18.1'
     implementation 'com.google.android.exoplayer:exoplayer-hls:2.18.1'
 
-    implementation 'com.android.billingclient:billing:5.0.0'
+    implementation 'com.android.billingclient:billing:5.1.0'
 
     // Mobile advertising
     implementation 'com.wortise:android-sdk:1.4.1'
