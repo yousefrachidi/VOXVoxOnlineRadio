@@ -27,6 +27,7 @@ import java.util.Date;
 
 import com.youra.radiofr.BuildConfig;
 import com.youra.radiofr.R;
+import com.youra.radiofr.callback.Callback;
 import com.youra.radiofr.utils.DBHelper;
 import com.youra.radiofr.utils.Helper;
 import com.youra.radiofr.utils.SharedPref;
@@ -170,14 +171,15 @@ public class MyApplication extends BaseApplication
          */
         private void loadAd(Context context) {
             // Do not load ad if there is an unused ad or one is already loading.
-            if (isLoadingAd || isAdAvailable()) {
+            if (isLoadingAd || isAdAvailable() || !Callback.isOpenAd) {
                 return;
             }
 
             isLoadingAd = true;
             AdRequest request = new AdRequest.Builder().build();
 
-            AppOpenAd.load(context, AD_UNIT_ID, request, AppOpenAd.APP_OPEN_AD_ORIENTATION_PORTRAIT, new AppOpenAd.AppOpenAdLoadCallback() {
+
+            AppOpenAd.load(context, Callback.openAdID , request, AppOpenAd.APP_OPEN_AD_ORIENTATION_PORTRAIT, new AppOpenAd.AppOpenAdLoadCallback() {
                 /**
                  * Called when an app open ad has loaded.
                  *
@@ -218,7 +220,7 @@ public class MyApplication extends BaseApplication
             // Ad references in the app open beta will time out after four hours, but this time limit
             // may change in future beta versions. For details, see:
             // https://support.google.com/admob/answer/9341964?hl=en
-            return appOpenAd != null && wasLoadTimeLessThanNHoursAgo(4);
+            return appOpenAd != null && wasLoadTimeLessThanNHoursAgo(4)   ;
         }
 
         /**

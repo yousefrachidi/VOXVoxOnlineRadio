@@ -19,7 +19,7 @@
         android:layout_marginBottom="@dimen/_1sdp"
         android:padding="@dimen/_1sdp"
         android:scaleType="center"
-        android:src="@drawable/logo"
+        android:src="@drawable/img_logo"
         app:riv_border_color="?colorSubBackground"
         app:riv_corner_radius_top_left="@dimen/_5sdp"
         app:riv_corner_radius_top_right="@dimen/_5sdp" />

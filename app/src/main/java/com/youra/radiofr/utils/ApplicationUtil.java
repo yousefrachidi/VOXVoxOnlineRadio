@@ -28,6 +28,7 @@ import java.util.regex.Pattern;
 
 import javax.net.ssl.HttpsURLConnection;
 
+import com.youra.radiofr.BuildConfig;
 import com.youra.radiofr.R;
 import com.youra.radiofr.callback.Callback;
 import okhttp3.OkHttpClient;
@@ -67,6 +68,9 @@ public class ApplicationUtil {
     @NonNull
     public static String toBase64(@NonNull String input) {
         byte[] encodeValue = Base64.encode(input.getBytes(), Base64.DEFAULT);
+        if (BuildConfig.DEBUG ) {
+            Log.d("TAG", "toBase64: "+new String(encodeValue));
+        }
         return new String(encodeValue);
     }
 

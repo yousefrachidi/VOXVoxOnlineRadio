@@ -128,7 +128,7 @@ public class SuggestionActivity extends YouraCompatActivity {
                         bitmap_upload = null;
                         editText_title.setText("");
                         editText_desc.setText("");
-                        iv_sugg.setImageDrawable(getResources().getDrawable(R.drawable.logo));
+                        iv_sugg.setImageDrawable(getResources().getDrawable(R.drawable.img_logo));
                         uploadDialog(message);
                     }else {
                         Toast.makeText(SuggestionActivity.this, getString(R.string.error_server_not_connected), Toast.LENGTH_SHORT).show();

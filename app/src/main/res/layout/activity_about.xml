@@ -40,7 +40,7 @@
                     android:layout_width="@dimen/_75sdp"
                     android:layout_height="@dimen/_75sdp"
                     android:contentDescription="@string/todo"
-                    android:src="@drawable/logo"
+                    android:src="@drawable/img_logo"
                     app:riv_corner_radius_bottom_left="@dimen/_10sdp"
                     app:riv_corner_radius_top_left="@dimen/_10sdp" />
 

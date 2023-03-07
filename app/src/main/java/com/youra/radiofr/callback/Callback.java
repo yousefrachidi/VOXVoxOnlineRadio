@@ -17,7 +17,7 @@ public class Callback implements Serializable {
     private static final long serialVersionUID = 1L;
 
     // API URL
-    public static String API_URL = BuildConfig.BASE_URL+"api.php";
+    public static String API_URL = BuildConfig.BASE_URL + "api.php";
 
     public static Context context;
     public static Boolean isAppOpen = false;
@@ -132,11 +132,11 @@ public class Callback implements Serializable {
     public static final String LOGIN_TYPE_GOOGLE = "Google";
 
     // About Details
-    public static ItemAbout itemAbout = new ItemAbout("","","","","","");
+    public static ItemAbout itemAbout = new ItemAbout("", "", "", "", "", "");
 
     public static int recentLimit = 10;
 
-    public static Boolean isBannerAd = true, isInterAd = true, isNativeAd = true;
+    public static Boolean isOpenAd = true, isBannerAd = true, isInterAd = true, isNativeAd = true;
 
     public static int adCount = 0;
     public static int interstitialAdShow = 5, nativeAdShow = 6;
@@ -147,6 +147,7 @@ public class Callback implements Serializable {
     public static String wortiseAppId = "";
     public static String publisherAdID = "";
     public static String bannerAdID = "";
+    public static String openAdID = "";
     public static String interstitialAdID = "";
     public static String nativeAdID = "";
 

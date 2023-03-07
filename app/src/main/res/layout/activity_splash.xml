@@ -16,7 +16,7 @@
         android:layout_centerInParent="true">
 
         <ImageView
-            android:src="@drawable/logo"
+            android:src="@drawable/img_logo"
             android:scaleType="centerCrop"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

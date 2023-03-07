@@ -184,7 +184,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
                 @Override
                 public void onEnd(String success, String verifyStatus, String message) {
                     if (success.equals("1")) {
-                        helper.initializeAds();
+                      /*  helper.initializeAds();
                         sharedPref.setAdsDetails(Callback.isBannerAd, Callback.isInterAd, Callback.isNativeAd, Callback.adNetwork,
                                 Callback.publisherAdID, Callback.startappAppId, "", Callback.ironAdsId,
                                 Callback.bannerAdID, Callback.interstitialAdID, Callback.nativeAdID, Callback.interstitialAdShow, Callback.nativeAdShow);
@@ -209,6 +209,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
                                     break;
                             }
                         }
+                        */
                     }
                 }
             });

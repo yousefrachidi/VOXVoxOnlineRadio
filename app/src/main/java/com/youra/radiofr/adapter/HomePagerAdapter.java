@@ -56,7 +56,7 @@ public class HomePagerAdapter extends EnchantedViewPagerAdapter {
 
         Picasso.get()
                 .load(arrayList.get(position).getImage())
-                .placeholder(R.drawable.logo)
+                .placeholder(R.drawable.img_logo)
                 .into(iv_banner);
 
         new LoadColor(view_gradient).execute(arrayList.get(position).getImage());

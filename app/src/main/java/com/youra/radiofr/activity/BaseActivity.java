@@ -1329,7 +1329,12 @@ public class BaseActivity extends YouraCompatActivity implements View.OnClickLis
     @Override
     public void onStart() {
         super.onStart();
-        GlobalBus.getBus().register(this);
+        try {
+            GlobalBus.getBus().register(this);
+        }
+        catch (Exception e){
+
+        }
     }
 
     @Override

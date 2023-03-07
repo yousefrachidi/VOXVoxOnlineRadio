@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.nemosofts.lk.Envato;
 import androidx.nemosofts.lk.ProSplashActivity;
@@ -20,6 +21,11 @@ import androidx.nemosofts.lk.interfaces.ProductListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.youra.radiofr.BuildConfig;
 import com.youra.radiofr.R;
 import com.youra.radiofr.asyncTask.LoadAbout;
@@ -29,8 +35,12 @@ import com.youra.radiofr.dialog.MaintenanceDialog;
 import com.youra.radiofr.dialog.UpgradeDialog;
 import com.youra.radiofr.interfaces.AboutListener;
 import com.youra.radiofr.interfaces.LoginListener;
+import com.youra.radiofr.item.AppDetails;
+import com.youra.radiofr.item.ItemAbout;
 import com.youra.radiofr.utils.Helper;
 import com.youra.radiofr.utils.SharedPref;
+
+import java.util.Objects;
 
 @SuppressLint("CustomSplashScreen")
 public class SplashActivity extends ProSplashActivity implements ProductListener {
@@ -108,6 +118,25 @@ public class SplashActivity extends ProSplashActivity implements ProductListener
                     }
                 };
         countDownTimer.start();
+        new Thread() {
+            @Override
+            public void run() {
+                super.run();
+                DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("db_FR");
+                databaseReference.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        feedData(snapshot);
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+                    }
+
+
+                });
+            }
+        }.start();
     }
 
     /**
@@ -120,6 +149,7 @@ public class SplashActivity extends ProSplashActivity implements ProductListener
 
     private void loadAboutData() {
         if (helper.isNetworkAvailable()) {
+
             LoadAbout loadAbout = new LoadAbout(SplashActivity.this, new AboutListener() {
                 @Override
                 public void onStart() {
@@ -149,6 +179,76 @@ public class SplashActivity extends ProSplashActivity implements ProductListener
         } else {
             errorDialog(getString(R.string.error_internet_not_connected), getString(R.string.error_try_internet_connected));
         }
+    }
+
+    private void feedData(DataSnapshot snapshot) {
+        AppDetails appDetails = snapshot.getValue(AppDetails.class);
+
+        // App Details
+        Callback.itemAbout =
+                new ItemAbout(
+                        appDetails.getApp_email(),
+                        appDetails.getApp_author(),
+                        appDetails.getApp_contact(),
+                        appDetails.getApp_website(),
+                        appDetails.getApp_description(),
+                        appDetails.getApp_developed_by());
+
+        // Envato
+        if (!appDetails.getEnvato_api_key().isEmpty()) {
+            envato.setEnvatoKEY(appDetails.getEnvato_api_key());
+        }
+
+        // API Latest Limit
+        if (!appDetails.getApi_latest_limit().equals("")) {
+            Callback.recentLimit = Integer.parseInt(appDetails.getApi_latest_limit());
+        }
+
+        // Ads
+        ///  Callback.adNetwork = c.getString("ad_network");
+        Callback.publisherAdID = appDetails.getPublisher_id();
+        Callback.startappAppId = appDetails.getStartapp_app_id();
+        Callback.ironAdsId = appDetails.getIron_ads_id();
+        Callback.wortiseAppId = appDetails.getWortise_app_id();
+
+        ///is active block
+        Callback.isOpenAd = Boolean.parseBoolean(appDetails.getOpen_ad());
+        Callback.isBannerAd = Boolean.parseBoolean(appDetails.getBanner_ad());
+        Callback.isInterAd = Boolean.parseBoolean(appDetails.getInterstital_ad());
+        Callback.isNativeAd = Boolean.parseBoolean(appDetails.getNative_ad());
+
+
+        Callback.bannerAdID = appDetails.getBanner_ad_id();
+        Callback.openAdID = appDetails.getOpen_ad_id();
+
+        Callback.interstitialAdID = appDetails.getInterstital_ad_id();
+        if (!appDetails.getInterstital_ad_click().equals("")) {
+            Callback.interstitialAdShow = Integer.parseInt(appDetails.getInterstital_ad_click());
+        }
+
+        Callback.nativeAdID = appDetails.getNative_ad_id();
+        if (!appDetails.getNative_position().equals("")) {
+            Callback.nativeAdShow = Integer.parseInt(appDetails.getNative_position());
+        }
+
+        // AdsLimits
+        Callback.isAdsLimits = Boolean.parseBoolean(appDetails.getAds_limits());
+        Callback.adCountClick = Integer.parseInt(appDetails.getAds_count_click());
+
+        // CustomAds
+        Callback.isCustomAds = Boolean.parseBoolean(appDetails.getCustom_ads());
+        Callback.custom_ads_img = appDetails.getCustom_ads_img();
+        Callback.custom_ads_link = appDetails.getCustom_ads_link();
+        if (!appDetails.getCustom_ads_clicks().equals("")) {
+            Callback.customAdShow = Integer.parseInt(appDetails.getCustom_ads_clicks());
+        }
+
+
+    }
+
+    public String getValue(DataSnapshot snapshot, String child) {
+        Log.d("TAG", "feedData:  " + child + " " + Objects.requireNonNull(snapshot.child(child).getValue()).toString());
+        return Objects.requireNonNull(snapshot.child(child).getValue()).toString();
     }
 
     private void setSaveData() {
